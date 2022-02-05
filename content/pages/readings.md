@@ -19,30 +19,321 @@ CMOS = complementary metal-oxide-semiconductor
 CS = common source  
 OCTC = open circuit time constant
 
-| LEC # | TOPICS | READINGS |
-| --- | --- | --- |
-| 1 | Introduction to semiconductors, doping, generation/recombination, TE carrier concentrations. Carrier dynamics and transport: drift. | Chapter 1; Chapter 2; Section 3.1 |
-| 2 | Excess populations and minimum carrier lifetime, photoconductivity. Non-uniform concentrations and diffusion. Fick's first and second laws. | Chapter 3; Section 4.1 |
-| 3 | The five basic equations. Device structures in TE: carriers and electrostatic potential; the 60 mV rule. Poisson's equation (PE). | Sections 4.2 and 4.3; Chapter 6 |
-| 4 | P-n junctions in thermal equilibrium and under reverse bias, the depletion approximation (DA), comparison to PE solution. | Sections 7.1 and 7.2 |
-| 5 | Review reverse biased junctions. Consider forward bias and the special case of minority carrier injection into quasineutral regions. | Section 5.1 |
-| 6 | Forward biased p-n junctions: carrier injection, i-v characteristics (ideal and real; forward and reverse). Engineering carrier injection. | Section 7.3 |
-| 7 | Bipolar junction transistors: two coupled diodes, terminal characteristics, regions of operation | Section 8.1 |
-| 8 | Solar cells and LEDs (light emitting diodes). | Sections 7.5 and 7.6 |
-| 9 | MOS capacitors: the DA applied to two-terminal MOS capacitor accumulation, depletion, and inversion; VFB, VT, QA, and QN | Sections 9.1, 9.2, 9.3, and 9.4 |
-| 10 | The three-terminal MOS capacitor. MOSFETs: begin gradual channel approximation (GCA) using DA and ignoring subthreshold carriers. | Sections 9.3 and 9.4; Section 10.1.1 (a) |
-| 11 | Complete GC/DA model for iDS: saturation, channel length modulation. Output characteristics; regions of operation. | Section 10.1.1 (a) |
-| 12 | Subthreshold operation of MOSFETs. Development of model; compare to full numerical solution. Compare to/contrast with BJTs. | &nbsp; |
-| 13 | Linear equivalent circuits for MOSFETs and BJTs at low and high frequency; transconductance of subthreshold MOSFETs. | Section 10.1.2 (a) and (c) |
-| 14 | Logic inverter basics. Introduction to CMOS: transfer characteristics, noise margins, optimal device sizing. | Section 15.1 |
-| 15 | CMOS analysis, continued: switching delays, power dissipation, speed/power trade-offs. | Section 15.2.4 |
-| 16 | CMOS analysis, continued: subthreshold leakage, scaling rules, and where it is all going. | &nbsp; |
-| 17 | Linear amplifier basics: performance metrics, current source biasing, current mirrors, mid-band range, two-port representation. | Sections 11.1 and 11.2 |
-| 18 | Single-transistor building block stages: common-source, common-gate, and common-drain (follower) stages; characteristics and features. | Section 11.4 |
-| 19 | Differential amplifiers: large signal transfer characteristics; small signal analysis using common- and difference-mode inputs. | Sections 12.1, 12.2, and 12.3 |
-| 20 | Multi-stage amplifiers I: cascading diff stages; current source biasing; output stages. | Sections 12.4 and 12.5 |
-| 21 | Multi-stage amplifiers II: active loads, biasing for maximum gain, input and output swings. | Chapter 13 |
-| 22 | Multi-stage amplifiers III: examples, stage selection, speciality stages, looking at a commercial op-amp schematic. Begin frequency response. | Chapter 13; Section 14.2.1 |
-| 23 | Frequency response of CS amplifiers, the Miller effect. Intrinsic frequency limitations of MOSFETs. Biasing to maximize speed, power trade-off. | Sections 14.2.2 and 14.3 |
-| 24 | OCTC method for estimating frequency response. Subthreshold amplifiers for ultra-lower power electronics, frequency performance. | Section 14.1 |
-| 25 | MOS imagers. Semester wrap-up; life after 6.012. |
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+LEC #
+{{< thclose >}}
+{{< thopen >}}
+TOPICS
+{{< thclose >}}
+{{< thopen >}}
+READINGS
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+1
+{{< tdclose >}}
+{{< tdopen >}}
+Introduction to semiconductors, doping, generation/recombination, TE carrier concentrations. Carrier dynamics and transport: drift.
+{{< tdclose >}}
+{{< tdopen >}}
+Chapter 1; Chapter 2; Section 3.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+2
+{{< tdclose >}}
+{{< tdopen >}}
+Excess populations and minimum carrier lifetime, photoconductivity. Non-uniform concentrations and diffusion. Fick's first and second laws.
+{{< tdclose >}}
+{{< tdopen >}}
+Chapter 3; Section 4.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+3
+{{< tdclose >}}
+{{< tdopen >}}
+The five basic equations. Device structures in TE: carriers and electrostatic potential; the 60 mV rule. Poisson's equation (PE).
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 4.2 and 4.3; Chapter 6
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+4
+{{< tdclose >}}
+{{< tdopen >}}
+P-n junctions in thermal equilibrium and under reverse bias, the depletion approximation (DA), comparison to PE solution.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 7.1 and 7.2
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+5
+{{< tdclose >}}
+{{< tdopen >}}
+Review reverse biased junctions. Consider forward bias and the special case of minority carrier injection into quasineutral regions.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 5.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+6
+{{< tdclose >}}
+{{< tdopen >}}
+Forward biased p-n junctions: carrier injection, i-v characteristics (ideal and real; forward and reverse). Engineering carrier injection.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 7.3
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+7
+{{< tdclose >}}
+{{< tdopen >}}
+Bipolar junction transistors: two coupled diodes, terminal characteristics, regions of operation
+{{< tdclose >}}
+{{< tdopen >}}
+Section 8.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+8
+{{< tdclose >}}
+{{< tdopen >}}
+Solar cells and LEDs (light emitting diodes).
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 7.5 and 7.6
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+9
+{{< tdclose >}}
+{{< tdopen >}}
+MOS capacitors: the DA applied to two-terminal MOS capacitor accumulation, depletion, and inversion; VFB, VT, QA, and QN
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 9.1, 9.2, 9.3, and 9.4
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+10
+{{< tdclose >}}
+{{< tdopen >}}
+The three-terminal MOS capacitor. MOSFETs: begin gradual channel approximation (GCA) using DA and ignoring subthreshold carriers.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 9.3 and 9.4; Section 10.1.1 (a)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+11
+{{< tdclose >}}
+{{< tdopen >}}
+Complete GC/DA model for iDS: saturation, channel length modulation. Output characteristics; regions of operation.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 10.1.1 (a)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+12
+{{< tdclose >}}
+{{< tdopen >}}
+Subthreshold operation of MOSFETs. Development of model; compare to full numerical solution. Compare to/contrast with BJTs.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+13
+{{< tdclose >}}
+{{< tdopen >}}
+Linear equivalent circuits for MOSFETs and BJTs at low and high frequency; transconductance of subthreshold MOSFETs.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 10.1.2 (a) and (c)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+14
+{{< tdclose >}}
+{{< tdopen >}}
+Logic inverter basics. Introduction to CMOS: transfer characteristics, noise margins, optimal device sizing.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 15.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+15
+{{< tdclose >}}
+{{< tdopen >}}
+CMOS analysis, continued: switching delays, power dissipation, speed/power trade-offs.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 15.2.4
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+16
+{{< tdclose >}}
+{{< tdopen >}}
+CMOS analysis, continued: subthreshold leakage, scaling rules, and where it is all going.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+17
+{{< tdclose >}}
+{{< tdopen >}}
+Linear amplifier basics: performance metrics, current source biasing, current mirrors, mid-band range, two-port representation.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 11.1 and 11.2
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+18
+{{< tdclose >}}
+{{< tdopen >}}
+Single-transistor building block stages: common-source, common-gate, and common-drain (follower) stages; characteristics and features.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 11.4
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+19
+{{< tdclose >}}
+{{< tdopen >}}
+Differential amplifiers: large signal transfer characteristics; small signal analysis using common- and difference-mode inputs.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 12.1, 12.2, and 12.3
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+20
+{{< tdclose >}}
+{{< tdopen >}}
+Multi-stage amplifiers I: cascading diff stages; current source biasing; output stages.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 12.4 and 12.5
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+21
+{{< tdclose >}}
+{{< tdopen >}}
+Multi-stage amplifiers II: active loads, biasing for maximum gain, input and output swings.
+{{< tdclose >}}
+{{< tdopen >}}
+Chapter 13
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+22
+{{< tdclose >}}
+{{< tdopen >}}
+Multi-stage amplifiers III: examples, stage selection, speciality stages, looking at a commercial op-amp schematic. Begin frequency response.
+{{< tdclose >}}
+{{< tdopen >}}
+Chapter 13; Section 14.2.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+23
+{{< tdclose >}}
+{{< tdopen >}}
+Frequency response of CS amplifiers, the Miller effect. Intrinsic frequency limitations of MOSFETs. Biasing to maximize speed, power trade-off.
+{{< tdclose >}}
+{{< tdopen >}}
+Sections 14.2.2 and 14.3
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+24
+{{< tdclose >}}
+{{< tdopen >}}
+OCTC method for estimating frequency response. Subthreshold amplifiers for ultra-lower power electronics, frequency performance.
+{{< tdclose >}}
+{{< tdopen >}}
+Section 14.1
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+25
+{{< tdclose >}}
+{{< tdopen >}}
+MOS imagers. Semester wrap-up; life after 6.012.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
